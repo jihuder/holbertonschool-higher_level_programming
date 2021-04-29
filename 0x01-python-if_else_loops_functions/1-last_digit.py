@@ -4,13 +4,13 @@ number = random.randint(-10000, 10000)
 
 ultimo = abs(number) % 10
 
-if ultimo > 5:
-    print("greater than 5")
-if ultimo < 0
+if number < 0
 ultimo = -ultimo
 
 print("Last digit of {} is {} and is".format(number, last_digit), end=" ")
-elif ultimo == 0:
-    print("0")
+if ultimo == 0:
+    print("and is 0")
+elif ultimo > 5:
+    print("and is greater than 5")
 else:
-    print("less than 6 and not 0")
+    print("and is less than 6 and not 0")
