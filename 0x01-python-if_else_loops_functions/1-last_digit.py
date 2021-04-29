@@ -5,7 +5,7 @@ number = random.randint(-10000, 10000)
 ultimo = abs(number) % 10
 
 if number < 0
-ultimo = -ultimo
+    ultimo = -ultimo
 
 print("Last digit of {} is {} and is".format(number, last_digit), end=" ")
 if ultimo == 0:
