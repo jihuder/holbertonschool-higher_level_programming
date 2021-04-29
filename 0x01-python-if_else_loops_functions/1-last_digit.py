@@ -4,10 +4,10 @@ number = random.randint(-10000, 10000)
 
 ultimo = abs(number) % 10
 
-if number < 0
+if number < 0:
     ultimo = -ultimo
 
-print("Last digit of {} is {} and is".format(number, last_digit), end=" ")
+print("Last digit of {} is {} and is".format(number, ultimo), end=" ")
 if ultimo == 0:
     print("and is 0")
 elif ultimo > 5:
