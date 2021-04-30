@@ -6,4 +6,5 @@ def uppercase(str):
             copy += chr(ord(i) - 32)
         else:
             copy += i
-    print(copy)
+    print(copy, end="")
+    print()
