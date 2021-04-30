@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
-    copy = ""
+    abc = ""
     for i in str:
         if ord(i) in range(97, 123):
-            copy += chr(ord(i) - 32)
+            abc += chr(ord(i) - 32)
         else:
-            copy += i
-    print(copy, end="")
-    print()
+            abc += i
+    print(abc)
