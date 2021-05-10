@@ -5,5 +5,3 @@ def multiple_returns(sentence):
     else:
             tupla = (len(sentence), sentence[0])
     return tupla
-
-     
