@@ -3,4 +3,4 @@
 
 
 class Rectangle:
-    """ atributos """clear
+    """ atributos """
