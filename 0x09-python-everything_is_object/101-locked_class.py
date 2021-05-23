@@ -4,4 +4,4 @@
 
 class LockedClass:
     """ Avoid creating a new one by the user"""
-     __slots__ = ['first_name']
+    __slots__ = ['first_name']
