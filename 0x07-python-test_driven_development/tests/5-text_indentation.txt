@@ -1,0 +1,22 @@
+	 >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+	 >>> text_indentation('Is this a string? let me check: No it is not. There are 4 strings')
+	 Is this a string?
+	 <BLANKLINE>
+	 let me check:
+	 <BLANKLINE>
+	 No it is not.
+	 <BLANKLINE>
+	 There are 4 strings
+
+	 >>> text_indentation()
+	 Traceback (most recent call last):
+	 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+	 >>> text_indentation('First', 'Second', 'Third', 'Bash')
+	 Traceback (most recent call last):
+	 TypeError: text_indentation() takes 1 positional argument but 4 were given
+
+	 >>> text_indentation(1)
+	 Traceback (most recent call last):
+	 TypeError: text must be a string
