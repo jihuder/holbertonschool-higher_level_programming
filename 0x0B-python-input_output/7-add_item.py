@@ -16,4 +16,4 @@ except:
 finally:
     for argc in sys.argv[1:]:
         list_js.append(argc)
-        save_to_json_file(list_js, 'add_item.json')
+    save_to_json_file(list_js, 'add_item.json')
