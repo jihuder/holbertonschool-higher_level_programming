@@ -1,2 +1,2 @@
---The server shows us the existing databases
+-- The server shows us the existing databases
 SHOW DATABASES;
