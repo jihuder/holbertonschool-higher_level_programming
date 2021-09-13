@@ -5,11 +5,10 @@ if number > 0:
     end = number % 10
 else :
     end = number % -10
-print("Last digit of {:d} is {:d} ".format(number, end), end=" ")
+print("Last digit of {:d} is {:d} and is".format(number, end), end=" ")
 if end > 5:
-    message = "and is greater than 5"
+    message = print("greater than 5")
 elif end == 0:
-    message = "and is 0"
+    message = print("is 0")
 elif end < 6:
-    message = "and is less than 6 and not 0"
-print(message)
+    print("less than 6 and not 0")
