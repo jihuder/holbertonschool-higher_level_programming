@@ -50,6 +50,10 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     def __str__(self):
         """str method"""
         cadena = ""
@@ -84,8 +88,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """square method"""
-        return cls(size, size)
