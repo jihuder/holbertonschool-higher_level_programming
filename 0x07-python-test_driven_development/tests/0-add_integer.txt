@@ -1,0 +1,177 @@
+Testing Document for 0-add_integer.py
+=====================================
+This is the unites doctstring file for the 0-add_integer.txt file
+
+Import module function:
+       >>> add_integer = __import__("0-add_integer").add_integer
+
+Test 1: no second argument
+
+     >>> add_integer(1)
+          99
+
+Test 2: 0 as uniq argument
+     >>> add_integer(0)
+          98
+
+Test 3: float arguments
+     >>> add_integer(4.3, 5.0)
+          9
+
+Test 4: no arguments
+     >>> add_integer()
+          Traceback (most recent call last):
+	       TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test 5: three arguments
+     >>> add_integer(1, 2, 3)
+          Traceback (most recent call last):
+	       TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test 6: string as argument
+     >>> add_integer("string")
+          Traceback (most recent call last):
+	       TypeError: a must be an integer
+
+Test 7: negative arguments
+     >>> add_integer(-3, -3)
+          -6
+
+Test 8: one negative argument
+     >>> add_integer(-8)
+          90
+>>> add_integer(10e1000)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(-10e1000)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(10e-1000)
+    98
+
+>>> add_integer(-10e-1000)
+    98
+
+>>> add_integer(-2)
+    96
+
+>>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('-inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+>>> add_integer(-)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+>>> add_integer(+)
+    Traceback (most recent call last):
+        ...
+    SyntaxError: invalid syntax
+
+>>> add_integer('1')
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer("1")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer([])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer(())
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer({})
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer([1])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer((1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer({'a':1})
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer([1, 2])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer((1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer(None, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+>>> add_integer(1, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+>>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(1, float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+>>> add_integer(1, '1')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+>>> add_integer(1, "1")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+>>> add_integer(1, [1])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+>>> add_integer(1, (1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+>>> add_integer(1, {})
+    Traceback (most recent call last):
