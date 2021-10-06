@@ -1,0 +1,28 @@
+=======================================
+Testing Document for 2-matrix_divide.py
+=======================================
+This is the unites doctstring file for the 0-add_integer.txt file
+
+Import the function:
+       >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Test 1: no arguments
+     >>> matrix_divided()
+     Traceback (most recent call last):
+     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test 2: integer lists and integer divisor
+     >>> matrix = [[1, 2, 3],[1, 2, 3]]
+     >>> matrix_divided(matrix, 2)
+     [[0.5, 1.0, 1.5],[0.5, 1.0, 1.5]]
+
+Test 3: one argument only
+     >>> matrix_divided([])
+     Traceback (most recent call last):
+     TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test 4: lists of different size
+     >>> matrix = [[1, 2, 3],[1, 2]]
+     >>> matrix_divided(matrix, 2)
+     Traceback (most recent call last):
+     TypeError: Each row of the matrix must have the same size
