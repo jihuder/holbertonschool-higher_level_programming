@@ -1,0 +1,30 @@
+Testing Document for 5-text_indentation.py
+==========================================
+This is the unites doctstring file for the 5-text_indentation.txt
+Import function:
+       >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Test 1: text argument
+     >>> text_indentation('Is this a string? let me check: No it is not. There are 4 strings')
+     Is this a string?
+     <BLANKLINE>
+     let me check:
+     <BLANKLINE>
+     No it is not.
+     <BLANKLINE>
+     There are 4 strings
+
+Test 2: no arguments
+     >>> text_indentation()
+     Traceback (most recent call last):
+     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test 3: multiple arguments (strings)
+     >>> text_indentation('First', 'Second', 'Third', 'Bash')
+     Traceback (most recent call last):
+     TypeError: text_indentation() takes 1 positional argument but 4 were given
+
+Test 4: integer argument
+     >>> text_indentation(1)
+     Traceback (most recent call last):
+     TypeError: text must be a string
