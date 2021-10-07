@@ -1,0 +1,27 @@
+Testing Document for 4-print_square.py
+======================================
+This is the unites doctstring file for the 4-print_square.py file
+
+Import function:
+       >>> print_square = __import__('4-print_square').print_square
+
+Test 1: square size 3
+     >>> print_square(3)
+     ###
+     ###
+     ###
+
+Test 2: float argument
+     >>> print_square(1.0)
+     Traceback (most recent call last):
+     TypeError: size must be an integer
+
+Test 3: negative argument
+     >>> print_square(-1)
+     Traceback (most recent call last):
+     ValueError: size must be >= 0
+
+Test 4: three arguments
+     >>> print_square(1, 2, 3)
+     Traceback (most recent call last):
+     TypeError: print_square() takes 1 positional argument but 3 were given
