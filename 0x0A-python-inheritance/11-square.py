@@ -21,7 +21,7 @@ class Square(Rectangle):
         """ method returns the area"""
         return super().area()
     def __str__(self):
-                """Method that returns a string from
-                        the inheritance of the string string """
+            """Method that returns a string from
+                    the inheritance of the string string """
 
-                return "[Square] {}/{}".format(self.__size, self.__size)
+            return "[Square] {}/{}".format(self.__size, self.__size)
