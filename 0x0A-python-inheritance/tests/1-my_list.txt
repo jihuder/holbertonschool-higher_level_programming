@@ -1,111 +1,29 @@
-The ``1-my_list`` module
-======================
+the MyList Module:
 
-Using ``Class MyList that inherits from list``
--------------------
+    >>> MyList = __import__('1-my_list').MyList
 
-This is an test text file. These are the possible test cases:
-
-##### Importing the function from the module #####
-      >>> MyList = __import__('1-my_list').MyList
-
-##### Check that the file is executable #####
-      >>> import os
-            >>> os.access('1-my_list.py', os.X_OK)
-	          True
-
-##### Check that the README file exists #####
-      >>> cwd = os.getcwd()
-            >>> check_readme = cwd + '/README.md'
-	          >>> os.path.exists(check_readme)
-		        True
-
-##### Check for the documentation of the module #####
-      >>> len(__import__("1-my_list").__doc__) > 10
-            True
-
-##### Check for the documentation of the function #####
-      >>> len(__import__("1-my_list").MyList.print_sorted.__doc__) > 10
-            True
-
-##### Check for pep8 style #####
-      >>> os.popen("pep8 1-my_list.py").read()
-            ''
-
-##### Check for a newline at the end of the file #####
-      >>> os.popen("cat -e 1-my_list.py | tail -1").read()[-1]
-            '\n'
-
-##### Check for the file has a shebang #####
-       >>> os.popen("cat 1-my_list.py | head -1").read()
-              '#!/usr/bin/python3\n'
-
-##### Check for object is a instance of the MyList class #####
-      >>> test_list = MyList()
-            >>> isinstance(test_list, list)
-	          True
-
-##### Check is the same type as the class #####
-      >>> test_list = MyList()
-            >>> type(test_list) == MyList
-	          True
-
-##### Check is print_sorted is a method in the MyList Class #####
-      >>> type(MyList.__dict__['print_sorted'])
-            <class 'function'>
-
-##### Check is print_sorted is a method in the MyList Class #####
-      >>> test = MyList()
-            >>> test.__class__.print_sorted()
-	          Traceback (most recent call last):
-		        ...
-			      TypeError: print_sorted() missing 1 required positional argument: 'self'
-
-##### Check for a empty list #####
-      >>> test_list = MyList()
-            >>> test_list.print_sorted()
-	          []
-
-##### Check when is passed a value in method print_sorted #####
-      >>> test_list.print_sorted([1])
-            Traceback (most recent call last):
-	          ...
-		        TypeError: print_sorted() takes 1 positional argument but 2 were given
-
-##### Check when is passed more than one argument to print_sorted #####
-      >>> test.print_sorted([1, 8, 7], 1)
-            Traceback (most recent call last):
-	          ...
-		        TypeError: print_sorted() takes 1 positional argument but 3 were given
-
-##### Check for a list with positive numbers  #####
-      >>> test_list = MyList([1, 8, 7])
-            >>> test_list.print_sorted()
-	          [1, 7, 8]
-
-##### Check for positives number and zero #####
-      >>> test_list = MyList([9, 4, 7, 0, 3])
-            >>> test_list.print_sorted()
-	          [0, 3, 4, 7, 9]
-
-##### Check for negative numbers #####
-      >>> test_list = MyList([-1, -8, -7])
-            >>> test_list.print_sorted()
-	          [-8, -7, -1]
-
-##### Check for negative and positive numbers #####
-      >>> test_list =  MyList([-1, 8, -7])
-            >>> test_list.print_sorted()
-	          [-7, -1, 8]
-
-##### Check if the original list doesnt changed #####
-      >>> test_list = MyList([1, 8, 7])
-            >>> test_list.print_sorted()
-	          [1, 7, 8]
-		        >>> test_list
-			      [1, 8, 7]
-
-##### Check if the append method works in the new object #####
-      >>> test_list = MyList([1, 8])
-            >>> test_list.append(7)
-	    
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> my_list.append(-3)
+    >>> my_list.print_sorted()
+    [-3, 1, 2, 3, 4, 5]
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
+    >>> my_list.append(1.9)
+    >>> my_list.print_sorted()
+    [1, 1.9]
