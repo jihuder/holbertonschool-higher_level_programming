@@ -2,15 +2,18 @@
 """This is the module of the rectangle class"""
 from models.base import Base
 
+
 class Rentagle(Base):
     """This is a Class rectangle"""
+
+
 def __init__(self, width, height, x=0, y=0, id=None):
     """Rectangle constructor method"""
     self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        super().__init__(id)
+    self.height = height
+    self.x = x
+    self.y = y
+    super().__init__(id)
 
     # Getter and setter of width
     @property
