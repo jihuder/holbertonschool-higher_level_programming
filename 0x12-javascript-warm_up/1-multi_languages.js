@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const len_C = 'C is fun';
-const len_Py = 'Python is cool';
-const len_Ja = 'JavaScript is amazing';
-console.log(len_C + '\n' + len_Py + '\n' + len_Ja);
+const one = 'C is fun';
+const two = 'Python is cool';
+const three = 'JavaScript is amazing';
+console.log(one + '\n' + two + '\n' + three);
