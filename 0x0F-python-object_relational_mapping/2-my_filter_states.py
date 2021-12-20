@@ -8,10 +8,15 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    cr = db.cursor()
-    cr.execute("""SELECT * FROM states ORDER BY id ASC""".format(argv[4]))
-    states = cr.fetchall()
-    for state in states:
-        print(state)
-    cr.close()
+    name = argv[4]
+    cursor = db.cursor()
+    cursor.execute("""SELECT * FROM states ORDER BY id ASC""".format(name))
+
+    search = cursor.fetchall()
+
+    for count in search:
+        if count[1] == name:
+            print(count)
+
+    cursor.close()
     db.close()
