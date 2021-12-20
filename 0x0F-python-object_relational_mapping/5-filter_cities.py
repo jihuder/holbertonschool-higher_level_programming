@@ -10,11 +10,17 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities\
+    cursor.execute("SELECT cities.name FROM cities\
                 INNER JOIN states ON cities.state_id = states.id\
-                ORDER BY cities.id")
+                WHERE states.name = %s\
+                ORDER BY cities.id", (argv[4], ))
     places = cursor.fetchall()
+    first = 0
     for count in places:
-        print(count)
+        if first != 0:
+            print(", ", end="")
+        print("%s" % count, end="")
+        first += 1
+    print("")
     cursor.close()
     db.close()
