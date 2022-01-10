@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """ script that fetches https://intranet.hbtn.io/status"""
+=======
+""" script that fetches"""
+>>>>>>> 4db1b34b09d6b107508950cfa4acd7f23debc8f4
 
 
 if __name__ == "__main__":
